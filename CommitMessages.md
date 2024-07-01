@@ -18,4 +18,6 @@ npx create-expo-app@latest ./ --template blank
 - Styled the bottom Nav menu using Tab screenOptions property
 
 3. OnBoarding Screen Setup
-- 
+- The index.jsx file under the app folder servers as the entry point for the app, so in effect the landing page, which had a call to action button to signup via email.
+- Created the CustomButtom component using the TouchableOpacity object from react-native
+- Manipulated the StatusBar 
