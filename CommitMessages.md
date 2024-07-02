@@ -44,3 +44,7 @@ npx create-expo-app@latest ./ --template blank
 - ```Bug``` User session needs to be cleared if you reload the app
 - ```Bug``` attributes are case sensitive. Ref: https://appwrite.io/threads/1234271741652500642
 - ```Bug``` account.CreateEmailSession is depreciated. User: account.createEmailPasswordSession(email, password)
+
+5.1. Appwrite Logic Bug fix
+- ```Bug``` User session needs to be cleared if you reload the app
+- Extended the signIn function in appwrite.js to check if there is an existing session and return that session before attempting to sign a user in. Ref: https://appwrite.io/threads/1237659392124522546
