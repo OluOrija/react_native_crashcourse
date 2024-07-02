@@ -26,3 +26,21 @@ npx create-expo-app@latest ./ --template blank
 - Created a FormField component, a container to handle text input with logic to handle password field type
 - Used Image, CustomButton, FormField components in a view->scrollView->safeAreaView to design the look and feel of the SignIn page, which was then copied and tweaked to design the SignUp page.
 - No Logic yet but there is navigation between the entry point to the sign in and sign up pages and
+
+5. Appwrite Logic
+- Sign up @ https://cloud.appwrite.io/
+- Created project : JSM_react_native_crash_course
+- Created lib folder -> appwrite.js to hold appwriteConfigs
+- Created database 'aora' in appwrite dashboard and added Id to appwrite.js config file
+- Created users and videos collection and added id to appwrite.js file
+- Setup attributes under the users and videos collection
+- Enabled 'Any' under permissions for user
+- Setup a 'Many to One' relationship key called creator linking videos to the users collection
+- Enabled 'All users' under permissions for videos
+- Created a 'Storage' bucket called files and added id to appwrite.js
+- Give users permissions and set file limit to 50MB
+- Set Allowed file Extensions
+- Implemented appwrite logic to get, and set users
+- ```Bug``` User session needs to be cleared if you reload the app
+- ```Bug``` attributes are case sensitive. Ref: https://appwrite.io/threads/1234271741652500642
+- ```Bug``` account.CreateEmailSession is depreciated. User: account.createEmailPasswordSession(email, password)
