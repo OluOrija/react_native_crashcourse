@@ -21,7 +21,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      //"package": "com.projectshadow.aora"
+      "package": "com.projectshadow.aora"
     },
     "web": {
       "favicon": "./assets/favicon.png"

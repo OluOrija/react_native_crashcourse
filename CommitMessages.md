@@ -54,3 +54,12 @@ npx create-expo-app@latest ./ --template blank
 - Implemented the home screen content and layout
 - Uploaded dummy videos to appwrite
 - Fetched those videos and rendered them using custom components
+
+7. Trending videos section
+- ```Bug``` The rendered videos are not playing : Possible bandwidth limit issue according to a comment on the tutorial video
+- REF: 
+@tuongnguyen590
+1 month ago (edited)
+If you get to the Home Page part (around 2:45:38) where the VideoCard component supposes to render thumbnail images but it doesn't. It's because the files the author provided had exceed the access bandwidth limit. You can upload your own videos and images to the same bucket created earlier in appwrite and update the video url as well as thumbnail url.
+Update: Looks like Adrian and team had updated the thumbnails/videos link
+

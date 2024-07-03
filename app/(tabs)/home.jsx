@@ -7,7 +7,6 @@ import useAppwrite from "../../lib/useAppwrite";
 import { getAllPosts, getLatestPosts } from "../../lib/appwrite";
 import { EmptyState, SearchInput, Trending, VideoCard } from "../../components";
 
-
 const Home = () => {
   const { data: posts, refetch } = useAppwrite(getAllPosts);
   const { data: latestPosts } = useAppwrite(getLatestPosts);
@@ -20,19 +19,29 @@ const Home = () => {
     setRefreshing(false);
   };
 
+  // one flatlist
+  // with list header
+  // and horizontal flatlist
+
+  //  we cannot do that with just scrollview as there's both horizontal and vertical scroll (two flat lists, within trending)
+
   return (
-    <SafeAreaView className="bg-primary h-full">
+    <SafeAreaView className="bg-primary">
       <FlatList
-        //data={[{id: 1}, {id:2}, {id:3},]}
-        //data={[]}
         data={posts}
         keyExtractor={(item) => item.$id}
         renderItem={({ item }) => (
-          <Text className="text-3xl text-white">{item.id}</Text>
+          <VideoCard
+            title={item.title}
+            thumbnail={item.thumbnail}
+            video={item.video}
+            creator={item.username}
+            avatar={item.avatar}
+          />
         )}
         ListHeaderComponent={() => (
-          <View className="my-6 px-4 space-y-6">
-            <View className="justify-between items-start flex-row mb-6">
+          <View className="flex my-6 px-4 space-y-6">
+            <View className="flex justify-between items-start flex-row mb-6">
               <View>
                 <Text className="font-pmedium text-sm text-gray-100">
                   Welcome Back
@@ -41,6 +50,7 @@ const Home = () => {
                   Shadow
                 </Text>
               </View>
+
               <View className="mt-1.5">
                 <Image
                   source={images.logoSmall}
@@ -72,7 +82,7 @@ const Home = () => {
         }
       />
     </SafeAreaView>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
