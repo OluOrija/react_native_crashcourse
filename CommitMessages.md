@@ -62,4 +62,12 @@ npx create-expo-app@latest ./ --template blank
 1 month ago (edited)
 If you get to the Home Page part (around 2:45:38) where the VideoCard component supposes to render thumbnail images but it doesn't. It's because the files the author provided had exceed the access bandwidth limit. You can upload your own videos and images to the same bucket created earlier in appwrite and update the video url as well as thumbnail url.
 Update: Looks like Adrian and team had updated the thumbnails/videos link
+- ```Tip``` Forgetting to reference the creator on a video will throw a null reference error
+- Reworked the session management logic on SignIn
+
+7.1 BUG
+- Whilst trying to fix the session/context issue I got stuck with the error: appwrite error User (role: guests) missing scope (account)
+- Commented out the GlobalProvider in app/_layout.jsx so we don't require a logged in user for now
+- And in app/index.jsx I'm just returning (return <Redirect href="/home"/>) to force the app into the Home screen straight away.
+- Living the BUG fix as a TODO: for now.
 
