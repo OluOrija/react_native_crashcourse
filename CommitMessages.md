@@ -71,3 +71,5 @@ Update: Looks like Adrian and team had updated the thumbnails/videos link
 - And in app/index.jsx I'm just returning (return <Redirect href="/home"/>) to force the app into the Home screen straight away.
 - Living the BUG fix as a TODO: for now.
 
+8. Search screen
+- ```Fixed``` Error: AppwriteException: Searching by attribute "title" requires a fulltext index - Fix by creating a fulltext index on the videos collection
