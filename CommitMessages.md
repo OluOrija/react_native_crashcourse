@@ -73,3 +73,7 @@ Update: Looks like Adrian and team had updated the thumbnails/videos link
 
 8. Search screen
 - ```Fixed``` Error: AppwriteException: Searching by attribute "title" requires a fulltext index - Fix by creating a fulltext index on the videos collection
+
+9. Profile screen
+- Ongoing issues with user SignIn is affecting the functionality of the page.
+- Deleting all users and fundling with creaEmailPasswordSession() method got me past the appwriterror. And reworking the method to check for the current session then deleting that session seems to be a more stable approach. Drawback is that it doesn't retain the session so all app refreshed require the user to login. TODO: investigate sesson manegement.
