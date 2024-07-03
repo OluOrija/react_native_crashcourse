@@ -48,3 +48,9 @@ npx create-expo-app@latest ./ --template blank
 5.1. Appwrite Logic Bug fix
 - ```Bug``` User session needs to be cleared if you reload the app
 - Extended the signIn function in appwrite.js to check if there is an existing session and return that session before attempting to sign a user in. Ref: https://appwrite.io/threads/1237659392124522546
+
+6. Home Screen
+- ```Lesson``` struglling to understand custom hooks with the use of useAppwrite.js to wrap appwrtie.js 
+- Implemented the home screen content and layout
+- Uploaded dummy videos to appwrite
+- Fetched those videos and rendered them using custom components
