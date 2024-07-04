@@ -77,3 +77,9 @@ Update: Looks like Adrian and team had updated the thumbnails/videos link
 9. Profile screen
 - Ongoing issues with user SignIn is affecting the functionality of the page.
 - Deleting all users and fundling with creaEmailPasswordSession() method got me past the appwriterror. And reworking the method to check for the current session then deleting that session seems to be a more stable approach. Drawback is that it doesn't retain the session so all app refreshed require the user to login. TODO: investigate sesson manegement.
+
+10. Create Screen
+- Implemented the Create screen.
+- Omn the front end we use a Video component imported from "expo-av" within a form, combined with the DocumentPicker.getDocumentAsync() function from DocumentPicker from "expo-document-picker".
+- The flow goes: createFile on storage -> get file Preview from the asset uploaded to storage -> create a video post using the asset uploaded.
+- Continued to rework the SignIn method to eliminate the AppwriteException: User(role:guests).... error
