@@ -83,3 +83,6 @@ Update: Looks like Adrian and team had updated the thumbnails/videos link
 - Omn the front end we use a Video component imported from "expo-av" within a form, combined with the DocumentPicker.getDocumentAsync() function from DocumentPicker from "expo-document-picker".
 - The flow goes: createFile on storage -> get file Preview from the asset uploaded to storage -> create a video post using the asset uploaded.
 - Continued to rework the SignIn method to eliminate the AppwriteException: User(role:guests).... error
+
+11. File Picker
+- Swapped DocumentPicker with expo ImagePicker
